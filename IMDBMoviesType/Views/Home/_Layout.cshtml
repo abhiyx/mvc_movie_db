@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	
+	<!--[if IE 6]>
+		<link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" />
+	<![endif]-->
+  
+   @Styles.Render("~/Style/style.css")   
+   @Scripts.Render("~/Scripts/jquery-1.4.2.min.js")
+   @Scripts.Render("~/Scripts/jquery-func.js")
+</head>
+<body>
+<!-- Shell -->
+<div id="shell">
+	<!-- Header -->
+	<div id="header">
+		<h1 id="logo"><a href="#">Movie Hunter</a></h1>
+		<div class="social">
+			<span>FOLLOW US ON:</span>
+			<ul>
+			    <li><a class="twitter" href="#">twitter</a></li>
+			    <li><a class="facebook" href="#">facebook</a></li>
+			    <li><a class="vimeo" href="#">vimeo</a></li>
+			    <li><a class="rss" href="#">rss</a></li>
+			</ul>
+		</div>
+		
+		<!-- Navigation -->
+		<div id="navigation">
+			<ul>
+			    <li><a class="active" href="#">HOME</a></li>
+			    
+			</ul>
+		</div>
+		<!-- end Navigation -->
+		
+		<!-- Sub-menu -->
+		<div id="sub-navigation">
+			<ul>
+			    <li><a href="#">@Html.ActionLink("Show All", "Index", new { /* id=item.PrimaryKey */ })</a></li>
+			    <li><a href="#">@Html.ActionLink("Latest", "MovieOrderBy", new {  rating="",released="yes" })</a></li>
+			    <li><a href="#">@Html.ActionLink("Top Rated", "MovieOrderBy", new {  rating="Yes",released="" })</a></li>
+			   
+			</ul>
+			
+		</div>
+		<!-- end Sub-Menu -->
+		
+	</div>
+	<!-- end Header -->
+	
+	<!-- Main -->
+	<div id="main">
+		<!-- Content -->
+         
+		
+                @RenderSection("featured", required: false)
+                        @RenderBody()
+		
+	<!-- end Main -->
+
+	<!-- Footer -->
+	<div id="footer">
+		
+		<p> &copy; 2009 Movie Hunter, LLC. All Rights Reserved.  Designed by <a href="http://chocotemplates.com" target="_blank" title="The Sweetest CSS Templates WorldWide">ChocoTemplates.com</a></p>
+	</div>
+	<!-- end Footer -->
+</div>
+<!-- end Shell -->
+</body>
+</html>

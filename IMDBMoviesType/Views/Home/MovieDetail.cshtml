@@ -1,0 +1,58 @@
+﻿@model IMDBMoviesType.Models.Movie
+
+@{
+    ViewBag.Title = "MovieDetail";
+    Layout = "~/Views/Home/_Layout.cshtml";
+}
+
+<div id="coming">
+			<div class="head">
+				<h3></h3>
+				<p class="text-right"></p>
+			</div>            
+			<div class="content">
+				<h4>@Model.title </h4>
+					<a href="#"><img src="@Model.poster" alt="coming soon" /></a>
+				<p>@Model.plot
+				</p>
+                <div class="cl">&nbsp;</div>
+                @{
+                    var actors = Model.actors;
+                    string[] actor = actors.Split(',');
+                    <div> <h3>Actors : 
+                       @foreach(var str in actor){
+                           @Html.ActionLink(str, "MovieSearch", new {  Director="", Actor=str, Year="", Genre="" })
+                       }
+                        
+                        <br /></h3></div>
+                }
+				
+                
+                <div class="cl">&nbsp;</div>
+              <div> <h3>Director : @Html.ActionLink(Model.director, "MovieSearch", new {  Director=Model.director, Actor="", Year="", Genre="" })<br /></h3></div>
+                <div class="cl">&nbsp;</div>
+                 @{
+                    var Genres = Model.genre;
+                    string[] genre = Genres.Split(',');
+                    <div> <h3>Genre : 
+                       @foreach(var str in genre){
+                           @Html.ActionLink(str, "MovieSearch", new {  Director="", Actor="", Year="", Genre=str })
+                       }
+
+                <br /></h3></div>
+                 }
+                <div class="cl">&nbsp;</div>
+                @{
+                    var releaseddate = Convert.ToDateTime(@Model.released);
+                    var year = Convert.ToString(releaseddate.Year);
+                     <div> <h3>Released Date : @releaseddate.Day / @releaseddate.Month / @Html.ActionLink(year, "MovieSearch", new {  Director="", Actor="", Year=year, Genre="" })<br /></h3></div>
+                }
+               
+                <div class="cl">&nbsp;</div>
+                <div> <h3>Writer : @Model.writer<br /></h3></div>
+               
+			</div>
+			<div class="cl">&nbsp;</div>
+			
+			
+		</div>

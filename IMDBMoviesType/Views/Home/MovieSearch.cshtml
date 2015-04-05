@@ -1,0 +1,72 @@
+﻿@model IEnumerable<IMDBMoviesType.Models.Movie>
+@using IMDBMoviesType.Models;
+@{
+    ViewBag.Title = "MovieSearch";
+}
+
+<div id="content">
+
+			<!-- Box -->
+			<div class="box">
+				<div class="head">
+					<h2></h2>
+					<p class="text-right"></p>
+				</div>
+@foreach(Movie movie in @Model)
+{
+    
+    
+    <!-- Movie -->
+				<div class="movie">					
+					<div class="movie-image">
+						
+						<a href="#"><span class="play"><span class="name">@movie.title</span></span><img src="@movie.poster" alt="movie" /></a>
+					</div>
+						
+					<div class="rating">
+						<p>RATING</p>
+						<div class="stars">
+                            @{var div = Convert.ToDecimal(movie.rating) ;
+                              var rating = Convert.ToInt32(div/2); }
+                            @if (rating <= 1)
+                            {
+							<div class="stars-in1">								
+							</div>}
+                            else if (rating <= 2)
+                            {
+                                <div class="stars-in2">								
+							</div>
+                            }
+                            else if (rating  <= 3)
+                            {
+                                <div class="stars-in3">								
+							</div>
+                            }
+                            else if (rating <= 4)
+                            {
+                                <div class="stars-in4">								
+							</div>
+                            }
+                            else if (rating <= 5)
+                            {
+                                <div class="stars-in5">								
+							</div>
+                            } else 
+                            {
+                                <div class="stars-in2">								
+							</div>
+                            }
+
+						</div>
+						<span class="comments">12</span>
+					</div>
+				</div>
+				<!-- end Movie -->
+}
+    
+				<div class="cl">&nbsp;</div>
+			</div>
+			<!-- end Box -->
+			
+			>
+	</div>
