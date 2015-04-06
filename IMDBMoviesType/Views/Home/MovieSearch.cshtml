@@ -20,7 +20,8 @@
 				<div class="movie">					
 					<div class="movie-image">
 						
-						<a href="#"><span class="play"><span class="name">@movie.title</span></span><img src="@movie.poster" alt="movie" /></a>
+						<span class="play"><span class="name">@Html.ActionLink(movie.title, "MovieDetail", new {  id=movie.imdb }) |
+                            @movie.title</span></span><img src="@movie.poster" alt="movie" />
 					</div>
 						
 					<div class="rating">
@@ -58,7 +59,7 @@
                             }
 
 						</div>
-						<span class="comments">12</span>
+						<span class="comments"></span>
 					</div>
 				</div>
 				<!-- end Movie -->

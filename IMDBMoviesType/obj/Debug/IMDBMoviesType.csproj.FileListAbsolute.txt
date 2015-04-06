@@ -30,3 +30,35 @@ c:\users\abhi\documents\visual studio 2012\Projects\IMDBMoviesType\IMDBMoviesTyp
 C:\Users\Abhi\documents\visual studio 2012\Projects\IMDBMoviesType\IMDBMoviesType\bin\System.Web.Optimization.dll
 C:\Users\Abhi\documents\visual studio 2012\Projects\IMDBMoviesType\IMDBMoviesType\bin\WebGrease.dll
 C:\Users\Abhi\documents\visual studio 2012\Projects\IMDBMoviesType\IMDBMoviesType\bin\Antlr3.Runtime.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\IMDBMoviesType.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\IMDBMoviesType.pdb
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\EntityFramework.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\EntityFramework.SqlServer.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\Newtonsoft.Json.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Net.Http.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Net.Http.WebRequest.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.Helpers.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.Mvc.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.Optimization.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.Razor.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.WebPages.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.WebPages.Razor.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\WebGrease.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\Antlr3.Runtime.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\EntityFramework.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\EntityFramework.SqlServer.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\Newtonsoft.Json.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Net.Http.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Net.Http.WebRequest.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.Helpers.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.Mvc.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.Razor.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.WebPages.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.WebPages.Razor.xml
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\obj\Debug\IMDBMoviesType.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\obj\Debug\IMDBMoviesType.dll
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\obj\Debug\IMDBMoviesType.pdb
