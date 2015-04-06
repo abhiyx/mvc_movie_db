@@ -10,7 +10,7 @@ namespace IMDBMoviesType.Controllers
     public class HomeController : Controller
     {
         
-        //Index Method used to Load Data on Index Controller
+        //Index Method used to Load Data on Index Controller, This is also default controller
         public ActionResult Index()
         {
             try
