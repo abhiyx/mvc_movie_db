@@ -49,17 +49,17 @@ function binddata(data) { // method to bind data for movie details
         
         var actor = actors.split(',');      
         for(var i=0; i< actor.length; i++) {
-            str += '<a href="/home/MovieSearch/?Director=&Actor=' + actor[i] + '&Year=&Genre=">' + actor[i] + '</a>'
+            str += '<a href="/home/MovieSearchs/?Director=&Actor=' + actor[i] + '&Year=&Genre=">' + actor[i] + '</a>'
         }
     } catch (e) {
     }
 		str +='<br /></h3></div><div class="cl">&nbsp;</div><div> <h3>Director :'
-		str += '<a href="/home/MovieSearch/?Director=' + data.director + '&Actor=&Year=&Genre=">' + data.director + '</a><br /></h3></div>'
+		str += '<a href="/home/MovieSearchs/?Director=' + data.director + '&Actor=&Year=&Genre=">' + data.director + '</a><br /></h3></div>'
 		str +='<div class="cl">&nbsp;</div><div> <h3>Genre : '
                      var Genres = data.genre;
                      var genre = Genres.split(',');
                      for(var i=0; i< genre.length; i++) {
-                         str += '<a href="/home/MovieSearch/?Director=&Actor=&Year=&Genre=' + genre[i] + '">' + genre[i] + '</a>'
+                         str += '<a href="/home/MovieSearchs/?Director=&Actor=&Year=&Genre=' + genre[i] + '">' + genre[i] + '</a>'
                      }
                       str +='<br /></h3></div><div class="cl">&nbsp;</div>'
                

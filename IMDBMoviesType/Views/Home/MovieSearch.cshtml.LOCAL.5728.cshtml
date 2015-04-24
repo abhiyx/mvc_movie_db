@@ -1,0 +1,146 @@
+﻿@model IEnumerable<IMDBMoviesType.Models.Movie>
+@using IMDBMoviesType.Models;
+@{
+    ViewBag.Title = "MovieSearch";
+}
+
+<div id="content">
+
+			<!-- Box -->
+			<div class="box">
+				<div class="head">
+					<h2></h2>
+					<p class="text-right"></p>
+				</div>
+                <div id="movielist">
+@foreach(Movie movie in @Model)
+{
+    
+    
+    <!-- Movie -->
+    var releaseddate = Convert.ToDateTime(@movie.released);
+    var year = Convert.ToString(releaseddate.Year);
+				<div class="movie" title=" @movie.title" rating="@movie.rating" year="@year">					
+					<div class="movie-image">
+						
+						<span class="play"><span class="name">
+                            @*@Html.ActionLink(movie.title, "MovieDetail", new {  id=movie.imdb })*@
+                            <a onclick="details(this.id);" href="javascript:void(0);" id="@movie.imdb">@movie.title</a>
+						                   </span></span><img src="@movie.poster" alt="movie" />
+					</div>
+						
+					<div class="rating">
+						<p>RATING</p>
+						<div class="stars">
+                            @{var div = Convert.ToDecimal(movie.rating) ;
+                              var rating = Convert.ToInt32(div/2); }
+                            @if (rating <= 1)
+                            {
+							<div class="stars-in1">								
+							</div>}
+                            else if (rating <= 2)
+                            {
+                                <div class="stars-in2">								
+							</div>
+                            }
+                            else if (rating  <= 3)
+                            {
+                                <div class="stars-in3">								
+							</div>
+                            }
+                            else if (rating <= 4)
+                            {
+                                <div class="stars-in4">								
+							</div>
+                            }
+                            else if (rating <= 5)
+                            {
+                                <div class="stars-in5">								
+							</div>
+                            } else 
+                            {
+                                <div class="stars-in2">								
+							</div>
+                            }
+
+						</div>
+						<span class="comments"></span>
+					</div>
+				</div>
+				<!-- end Movie -->
+}
+                </div>
+    
+				<div class="cl">&nbsp;</div>
+			</div>
+			<!-- end Box -->
+			
+			>
+	</div>
+@*<div id="content">
+
+			<!-- Box -->
+			<div class="box">
+				<div class="head">
+					<h2></h2>
+					<p class="text-right"></p>
+				</div>
+@foreach(Movie movie in @Model)
+{
+    
+    
+    <!-- Movie -->
+				<div class="movie" >					
+					<div class="movie-image">
+						
+						<span class="play"><span class="name">@Html.ActionLink(movie.title, "MovieDetail", new {  id=movie.imdb }) |
+                            @movie.title</span></span><img src="@movie.poster" alt="movie" />
+					</div>
+						
+					<div class="rating">
+						<p>RATING</p>
+						<div class="stars">
+                            @{var div = Convert.ToDecimal(movie.rating) ;
+                              var rating = Convert.ToInt32(div/2); }
+                            @if (rating <= 1)
+                            {
+							<div class="stars-in1">								
+							</div>}
+                            else if (rating <= 2)
+                            {
+                                <div class="stars-in2">								
+							</div>
+                            }
+                            else if (rating  <= 3)
+                            {
+                                <div class="stars-in3">								
+							</div>
+                            }
+                            else if (rating <= 4)
+                            {
+                                <div class="stars-in4">								
+							</div>
+                            }
+                            else if (rating <= 5)
+                            {
+                                <div class="stars-in5">								
+							</div>
+                            } else 
+                            {
+                                <div class="stars-in2">								
+							</div>
+                            }
+
+						</div>
+						<span class="comments"></span>
+					</div>
+				</div>
+				<!-- end Movie -->
+}
+    
+				<div class="cl">&nbsp;</div>
+			</div>
+			<!-- end Box -->
+			
+			>
+	</div>*@

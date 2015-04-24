@@ -81,7 +81,38 @@ namespace IMDBMoviesType.Controllers
                 return View("Error");
             }
         }
-
+        /*MovieSearch Method Search Movie Based on Parameter 
+        This method will at a time receive only one parameter value and rest params will be null
+        */
+        public ActionResult MovieSearchs(string Director, string Actor, string Year, string Genre)
+        {
+            try
+            {
+                MovieCollection moviecollection = new MovieCollection();
+                List<Movie> movies = new List<Movie>();
+                if (Director != null && Director != "")
+                {
+                    movies = moviecollection.Movie.Where(x => x.director == Director).ToList();
+                }
+                else if (Actor != null && Actor != "")
+                {
+                    movies = moviecollection.Movie.Where(x => x.actors.Contains(Actor)).ToList();
+                }
+                else if (Year != null && Year != "")
+                {
+                    movies = moviecollection.Movie.Where(x => x.released.Contains(Year)).ToList();
+                }
+                else if (Genre != null && Genre != "")
+                {
+                    movies = moviecollection.Movie.Where(x => x.genre.Contains(Genre)).ToList();
+                }
+                return View(movies);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
+        }
         /*Method to fetch details of movies based on id
          */
         public ActionResult MovieDetail(string id)

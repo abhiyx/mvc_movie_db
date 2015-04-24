@@ -1,7 +1,9 @@
-﻿@model IEnumerable<IMDBMoviesType.Models.Movie>
+﻿
+@model IEnumerable<IMDBMoviesType.Models.Movie>
 @using IMDBMoviesType.Models;
+
 @{
-    ViewBag.Title = "MovieSearch";
+    ViewBag.Title = "MovieSearchs";
 }
 
 <div id="content">
@@ -12,16 +14,21 @@
 					<h2></h2>
 					<p class="text-right"></p>
 				</div>
+                <div id="movielist">
 @foreach(Movie movie in @Model)
 {
     
     
     <!-- Movie -->
-				<div class="movie">					
+    var releaseddate = Convert.ToDateTime(@movie.released);
+    var year = Convert.ToString(releaseddate.Year);
+				<div class="movie" title=" @movie.title" rating="@movie.rating" year="@year">					
 					<div class="movie-image">
 						
-						<span class="play"><span class="name">@Html.ActionLink(movie.title, "MovieDetail", new {  id=movie.imdb }) |
-                            @movie.title</span></span><img src="@movie.poster" alt="movie" />
+						<span class="play"><span class="name">
+                            @*@Html.ActionLink(movie.title, "MovieDetail", new {  id=movie.imdb })*@
+                            <a onclick="details(this.id);" href="javascript:void(0);" id="@movie.imdb">@movie.title</a>
+						                   </span></span><img src="@movie.poster" alt="movie" />
 					</div>
 						
 					<div class="rating">
@@ -59,11 +66,12 @@
                             }
 
 						</div>
-						<span class="comments">12</span>
+						<span class="comments"></span>
 					</div>
 				</div>
 				<!-- end Movie -->
 }
+                </div>
     
 				<div class="cl">&nbsp;</div>
 			</div>
