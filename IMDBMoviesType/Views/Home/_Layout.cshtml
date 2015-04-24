@@ -11,6 +11,7 @@
    @Styles.Render("~/Style/style.css")   
    @Scripts.Render("~/Scripts/jquery-1.4.2.min.js")
    @Scripts.Render("~/Scripts/jquery-func.js")
+     @Scripts.Render("~/Scripts/movies.js")
 </head>
 <body>
 <!-- Shell -->
@@ -41,8 +42,11 @@
 		<div id="sub-navigation">
 			<ul>
 			    <li><a href="#">@Html.ActionLink("Show All", "Index", new { /* id=item.PrimaryKey */ })</a></li>
-			    <li><a href="#">@Html.ActionLink("Latest", "MovieOrderBy", new {  rating="",released="yes" })</a></li>
-			    <li><a href="#">@Html.ActionLink("Top Rated", "MovieOrderBy", new {  rating="Yes",released="" })</a></li>
+			   @* <li><a href="#">@Html.ActionLink("Latest", "MovieOrderBy", new {  rating="",released="yes" })</a></li>*@
+			   @* <li><a href="#">@Html.ActionLink("Top Rated", "MovieOrderBy", new {  rating="Yes",released="" })</a></li>*@
+                <li id="sort_year"><a href="#">Latest</a></li>
+                 <li id="sort_rating"><a href="#">Top Rated</a></li>
+                <li id="sort_alp"><a href="#">Sort Alphabetically</a></li>
 			   
 			</ul>
 			
@@ -61,7 +65,9 @@
                         @RenderBody()
 		
 	<!-- end Main -->
-
+        <div id="backgroundPopup"></div>
+    <div id="details" class="toPopup">
+        </div>
 	<!-- Footer -->
 	<div id="footer">
 		
@@ -69,6 +75,8 @@
 	</div>
 	<!-- end Footer -->
 </div>
+     
+
 <!-- end Shell -->
 </body>
 </html>

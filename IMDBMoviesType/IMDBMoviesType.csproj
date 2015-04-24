@@ -142,6 +142,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.2.min.js" />
     <Content Include="Scripts\jquery-func.js" />
+    <Content Include="Scripts\movies.js" />
     <Content Include="Style\ie6.css" />
     <Content Include="Style\images\body-bg.gif" />
     <Content Include="Style\images\coming-soon1.jpg" />

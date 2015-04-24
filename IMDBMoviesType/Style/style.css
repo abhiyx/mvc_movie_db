@@ -111,5 +111,16 @@ h1#logo a { float:left; width:239px; height:49px; background:url('images/logo.gi
 
 #footer a:hover.designby { color:#9c9c9c; text-decoration:none; }
 
-
+.popup {
+  position: absolute;
+  z-index: 9;
+  top: 100%;
+  left: 0;
+  width: 150%;
+  margin: 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #8a8b92;
+  display: none;
+}
 

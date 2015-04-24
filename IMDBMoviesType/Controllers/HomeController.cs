@@ -58,19 +58,19 @@ namespace IMDBMoviesType.Controllers
             try{
             MovieCollection moviecollection = new MovieCollection();
             List<Movie> movies = new List<Movie>();
-            if (Director != null)
+            if (Director != null && Director != "")
             {               
                  movies = moviecollection.Movie.Where(x => x.director == Director).ToList();
             }
-            else if (Actor != null)
+            else if (Actor != null && Actor != "")
             {
                 movies = moviecollection.Movie.Where(x => x.actors.Contains(Actor)).ToList();
             }
-            else if (Year != null)
+            else if (Year != null && Year != "")
             {
                 movies = moviecollection.Movie.Where(x => x.released.Contains(Year)).ToList();
             }
-            else if (Genre != null)
+            else if (Genre != null && Genre != "")
             {
                 movies = moviecollection.Movie.Where(x => x.genre.Contains(Genre)).ToList();
             }
@@ -93,6 +93,25 @@ namespace IMDBMoviesType.Controllers
                 Movie movies = moviecollection.Movie.FirstOrDefault(x => x.imdb == id);
                
                 return View(movies);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
+        }
+    
+        /*Method to fetch details of movies based on id
+         */
+       [HttpPost]
+        public ActionResult MovieDetailByName(string id)
+        {
+            try
+            {
+                MovieCollection moviecollection = new MovieCollection();
+                //List<Movie> movies = moviecollection.Movie.ToList();
+                Movie movies = moviecollection.Movie.FirstOrDefault(x => x.imdb == id);
+
+                return Json(movies);
             }
             catch (Exception ex)
             {

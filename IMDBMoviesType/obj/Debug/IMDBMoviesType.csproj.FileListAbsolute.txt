@@ -59,6 +59,6 @@ C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.Razor.xml
 C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.WebPages.xml
 C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\bin\System.Web.WebPages.Razor.xml
-C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\obj\Debug\IMDBMoviesType.csprojResolveAssemblyReference.cache
 C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\obj\Debug\IMDBMoviesType.dll
 C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\obj\Debug\IMDBMoviesType.pdb
+C:\Users\Public\Documents\IMDBMoviesType\IMDBMoviesType\obj\Debug\IMDBMoviesType.csprojResolveAssemblyReference.cache
